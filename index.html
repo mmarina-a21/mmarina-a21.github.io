@@ -18,9 +18,9 @@
     --ink:#17171C;
     --ink-soft:#4A4A55;
     --line:#D6CEBC;
-    --tomato:#8E3B6B;
-    --teal:#9A6A1C;
-    --amber:#D9A441;
+    --tomato:#E4572E;
+    --teal:#17806D;
+    --amber:#E8A33D;
     --night:#14151B;
     --night-2:#1E2029;
     --card:#FFFDF8;
@@ -36,11 +36,11 @@
   [data-theme="dark"]{
     --paper:#111217;--paper-2:#171920;--ink:#F1EDE4;--ink-soft:#A9A6B4;--line:#2A2C37;
     --card:#1A1C24;--nav-bg:rgba(17,18,23,.82);--night:#0A0B0F;--night-2:#15161D;
-    --teal:#E0B25A;--shadow:#C07AA3;--tomato:#C07AA3;--lvl3:#E8B04D;
+    --teal:#22A68D;--shadow:#E4572E;--lvl3:#E8B04D;
   }
   [data-theme="dark"] .casefile{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   [data-theme="dark"] .project.feature.dark{border-color:var(--line)}
-  [data-theme="dark"] .console{box-shadow:0 30px 60px -25px rgba(0,0,0,.8), 7px 7px 0 var(--tomato);border:1px solid var(--line)}
+  [data-theme="dark"] .console{box-shadow:0 30px 60px -25px rgba(0,0,0,.8), 10px 10px 0 var(--tomato);border:1px solid var(--line)}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
@@ -73,24 +73,24 @@
   @media (max-width:760px){ nav ul{display:none} }
 
   /* ---------- hero ---------- */
-  .hero{padding:72px 0 80px}
-  .hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:center}
+  .hero{padding:88px 0 72px}
+  .hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
   .eyebrow{
     font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;
     color:var(--teal);display:inline-flex;align-items:center;gap:10px;margin-bottom:22px
   }
-  .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(154,106,28,.5);animation:pulse 2s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(154,106,28,.45)}70%{box-shadow:0 0 0 10px rgba(154,106,28,0)}100%{box-shadow:0 0 0 0 rgba(154,106,28,0)}}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(23,128,109,.5);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(23,128,109,.45)}70%{box-shadow:0 0 0 10px rgba(23,128,109,0)}100%{box-shadow:0 0 0 0 rgba(23,128,109,0)}}
   h1{
     font-family:var(--display);font-weight:800;
-    font-size:clamp(34px,3.9vw,52px);line-height:1.08;letter-spacing:-.025em;margin-bottom:22px;max-width:15ch
+    font-size:clamp(42px,5.6vw,72px);line-height:1.04;letter-spacing:-.025em;margin-bottom:26px
   }
   h1 .scribble{position:relative;white-space:nowrap}
   h1 .scribble::after{
     content:"";position:absolute;left:-2%;right:-2%;bottom:.06em;height:.28em;
-    background:#C07AA3;opacity:.35;z-index:-1;border-radius:4px;transform:rotate(-1deg)
+    background:var(--tomato);opacity:.28;z-index:-1;border-radius:4px;transform:rotate(-1deg)
   }
-  .lede{font-size:18px;line-height:1.6;color:var(--ink-soft);max-width:40ch;margin-bottom:30px}
+  .lede{font-size:20px;color:var(--ink-soft);max-width:34ch;margin-bottom:34px}
   .lede strong{color:var(--ink)}
   .cta{display:flex;gap:14px;flex-wrap:wrap}
   .btn{
@@ -108,24 +108,24 @@
   /* console */
   .console{
     background:var(--night);color:#E9E6DF;border-radius:var(--radius);
-    font-family:var(--mono);font-size:13px;line-height:1.7;max-width:440px;justify-self:end;width:100%;
-    box-shadow:0 24px 50px -25px rgba(20,21,27,.5), 7px 7px 0 var(--tomato);
+    font-family:var(--mono);font-size:14.5px;line-height:1.75;
+    box-shadow:0 30px 60px -25px rgba(20,21,27,.55), 10px 10px 0 var(--tomato);
     overflow:hidden;
     transform:perspective(1000px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) rotate(1deg);
     transition:transform .5s var(--ease), box-shadow .35s;will-change:transform
   }
-  .console:hover{box-shadow:0 34px 60px -25px rgba(20,21,27,.55), 10px 10px 0 var(--tomato)}
+  .console:hover{box-shadow:0 40px 70px -25px rgba(20,21,27,.6), 14px 14px 0 var(--tomato)}
   .console-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--night-2)}
   .console-bar i{width:11px;height:11px;border-radius:50%;display:block}
   .console-bar i:nth-child(1){background:#F25F4C}
   .console-bar i:nth-child(2){background:#F2B84C}
   .console-bar i:nth-child(3){background:#3FBF8F}
   .console-bar span{margin-left:10px;font-size:12px;color:#8C8A99}
-  .console pre{padding:18px 20px 20px;white-space:pre-wrap;min-height:286px;font-family:inherit;line-height:1.65}
-  .k{color:#D9A441}.s{color:#F2C6DA}.c{color:#8C8A99}.r{color:#E79BC2}.pu{color:#D9A441}.err{color:#F08A9B;font-weight:600}.out{color:#E9E6DF}
+  .console pre{padding:22px 22px 26px;white-space:pre-wrap;min-height:290px;font-family:inherit}
+  .k{color:#F2B84C}.s{color:#7FD8BE}.c{color:#8C8A99}.r{color:#F58A6E}
   .caret{display:inline-block;width:8px;height:1.1em;background:#E9E6DF;vertical-align:-3px;animation:blink 1s steps(1) infinite}
   @keyframes blink{50%{opacity:0}}
-  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr} .console{transform:none;justify-self:start} }
+  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr} .console{transform:none} }
 
   /* ---------- stat strip ---------- */
   .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper-2)}
@@ -190,8 +190,8 @@
   .steps b{color:#fff;display:block;font-size:17px}
   .steps p{color:#BEBBC8;font-size:16.5px}
   .case-note{
-    margin-top:28px;padding:16px 20px;border-radius:12px;background:rgba(142,59,107,.12);
-    border-left:4px solid var(--tomato);color:#EED5E3;font-size:16.5px
+    margin-top:28px;padding:16px 20px;border-radius:12px;background:rgba(228,87,46,.12);
+    border-left:4px solid var(--tomato);color:#F2D9D0;font-size:16.5px
   }
   @media (max-width:860px){ .case-card{grid-template-columns:1fr} .case-side{border-right:none;border-bottom:1.5px dashed #333543} }
 
@@ -228,7 +228,7 @@
     font-family:var(--mono);font-size:13.5px;padding:6px 12px;border-radius:8px;
     background:var(--paper);border:1px solid var(--line);transition:opacity .25s, background .25s, border-color .25s
   }
-  .lvl-1 h3{color:var(--teal)} .lvl-1 .chip{border-color:rgba(154,106,28,.35)}
+  .lvl-1 h3{color:var(--teal)} .lvl-1 .chip{border-color:rgba(23,128,109,.35)}
   .lvl-2 h3{color:var(--tomato)}
   .lvl-3 h3{color:var(--lvl3)}
   .chip.dim{opacity:.22}
@@ -243,9 +243,9 @@
     transition:transform .2s, box-shadow .2s
   }
   .project:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--shadow)}
-  .project.feature{grid-column:1 / -1;background:#5E2A4B;color:#fff;border-color:#5E2A4B}
+  .project.feature{grid-column:1 / -1;background:var(--teal);color:#fff;border-color:var(--teal)}
   .project.feature:hover{box-shadow:8px 8px 0 var(--shadow)}
-  .project.feature p,.project.feature li{color:#F5E6EE}
+  .project.feature p,.project.feature li{color:#E3F4EF}
   .p-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
   .project h3{font-family:var(--display);font-size:30px;line-height:1.1}
   .status{font-family:var(--mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1.5px solid currentColor;white-space:nowrap}
@@ -259,7 +259,7 @@
   .greek-demo{
     background:rgba(0,0,0,.18);border-radius:14px;padding:22px;display:grid;gap:12px;align-content:start
   }
-  .greek-demo .q{font-family:var(--mono);font-size:13px;color:#EBD3E1}
+  .greek-demo .q{font-family:var(--mono);font-size:13px;color:#BFE6DB}
   .greek-demo .word{font-family:var(--display);font-size:34px;font-weight:800}
   .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .opts button{
@@ -268,8 +268,8 @@
   }
   .opts button:hover{border-color:#fff}
   .opts button.right{background:#fff;color:var(--teal);border-color:#fff}
-  .opts button.wrong{background:rgba(142,59,107,.85);border-color:transparent}
-  .greek-demo .fb{min-height:1.5em;font-size:15px;color:#F5E6EE}
+  .opts button.wrong{background:rgba(228,87,46,.85);border-color:transparent}
+  .greek-demo .fb{min-height:1.5em;font-size:15px;color:#E3F4EF}
   .project.soon{border-style:dashed;background:transparent;justify-content:center;align-items:flex-start}
   .project.soon:hover{box-shadow:none;transform:none}
   @media (max-width:860px){ .projects{grid-template-columns:1fr} .feature-grid{grid-template-columns:1fr} }
@@ -303,19 +303,19 @@
   .project.feature .code-link.light{color:#fff;border-bottom-color:#fff}
   .project.feature .code-link.light:hover{color:#fff;opacity:.85}
   .arch{background:rgba(0,0,0,.18);border-radius:14px;padding:22px;display:grid;gap:0;align-content:start}
-  .arch .q{font-family:var(--mono);font-size:13px;color:#EBD3E1;margin-bottom:14px}
+  .arch .q{font-family:var(--mono);font-size:13px;color:#BFE6DB;margin-bottom:14px}
   .tier{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.28);border-radius:12px;padding:14px 16px;display:grid;gap:2px;transition:transform .3s var(--ease), background-color .3s, border-color .3s}
   .tier:hover{transform:translateX(6px);background:rgba(255,255,255,.18);border-color:#fff}
   .tier b{font-family:var(--display);font-size:19px;color:#fff}
-  .tier span{font-family:var(--mono);font-size:12.5px;color:#F3E2EC}
-  .tier small{font-size:13.5px;color:#EBD3E1}
+  .tier span{font-family:var(--mono);font-size:12.5px;color:#D6F0E9}
+  .tier small{font-size:13.5px;color:#BFE6DB}
   .tier.db{border-style:dashed}
   .mods{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
   .mods span{font-family:var(--mono);font-size:12px;padding:3px 9px;border-radius:6px;background:rgba(0,0,0,.22);color:#fff}
   .pipe{display:flex;align-items:center;gap:10px;height:38px;padding-left:26px}
   .pipe i{width:2px;height:100%;background:repeating-linear-gradient(to bottom,#fff 0 4px,transparent 4px 8px);background-size:2px 8px;animation:flow 1s linear infinite}
   @keyframes flow{to{background-position:0 8px}}
-  .pipe em{font-family:var(--mono);font-size:12px;font-style:normal;color:#EBD3E1}
+  .pipe em{font-family:var(--mono);font-size:12px;font-style:normal;color:#BFE6DB}
 
   .project.feature.lightf{background:var(--card);color:var(--ink);border-color:var(--ink)}
   .project.feature.lightf p,.project.feature.lightf li{color:var(--ink-soft)}
@@ -333,9 +333,9 @@
   .vh em{font-style:normal;font-family:var(--mono);font-size:11.5px;padding:2px 8px;border-radius:99px}
   .vh li.bad::before{background:var(--tomato)}
   .vh li.bad span{text-decoration:line-through;text-decoration-color:var(--tomato);color:var(--ink-soft)}
-  .vh li.bad em{background:rgba(142,59,107,.15);color:var(--tomato)}
+  .vh li.bad em{background:rgba(228,87,46,.15);color:var(--tomato)}
   .vh li.good::before{background:var(--amber)}
-  .vh li.good em{background:rgba(154,106,28,.15);color:var(--teal)}
+  .vh li.good em{background:rgba(23,128,109,.15);color:var(--teal)}
   .tree{display:grid;gap:10px;justify-items:center;font-family:var(--mono);font-size:13px}
   .tree .kids{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;position:relative}
   .tree .node{padding:7px 12px;border-radius:8px;background:var(--card);border:1.5px solid var(--line);color:var(--ink);transition:border-color .25s, transform .3s var(--ease)}
@@ -361,14 +361,14 @@
   @media (max-width:760px){ .edu{grid-template-columns:1fr} }
 
   /* contact */
-  .contact{background:#7A3159;color:#fff;padding:110px 0;text-align:center}
+  .contact{background:var(--tomato);color:#fff;padding:110px 0;text-align:center}
   .contact h2{font-size:clamp(40px,6vw,76px);color:#fff;margin-bottom:18px}
-  .contact p{font-size:20px;max-width:44ch;margin:0 auto 36px;color:#F6E4EE}
+  .contact p{font-size:20px;max-width:44ch;margin:0 auto 36px;color:#FFE9E1}
   .contact .cta{justify-content:center}
   .contact .btn{border-color:#fff;color:#fff}
-  .contact .btn-solid{background:#fff;color:#7A3159}
+  .contact .btn-solid{background:#fff;color:var(--tomato)}
   .contact .btn-solid:hover{background:#17171C;color:#fff;border-color:#17171C}
-  .contact .btn-ghost:hover{background:#fff;color:#7A3159}
+  .contact .btn-ghost:hover{background:#fff;color:var(--tomato)}
   footer{padding:28px 0;font-family:var(--mono);font-size:13px;color:var(--ink-soft)}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
@@ -401,7 +401,7 @@
   h1 .w > span{display:inline-block;transform:translateY(105%);animation:wordUp .9s var(--ease) forwards;animation-delay:calc(var(--i) * 90ms + 150ms);transition:color .25s, transform .35s var(--ease)}
   @keyframes wordUp{to{transform:translateY(0)}}
   h1 .w:hover > span{color:var(--tomato)}
-  h1 .scribble::after{transform:rotate(-1deg) scaleX(0);transform-origin:left;animation:drawLine .7s var(--ease) 1.4s forwards;transition:height .3s var(--ease), opacity .3s}
+  h1 .scribble::after{transform:rotate(-1deg) scaleX(0);transform-origin:left;animation:drawLine .7s var(--ease) 1s forwards;transition:height .3s var(--ease), opacity .3s}
   @keyframes drawLine{to{transform:rotate(-1deg) scaleX(1)}}
   h1 .w:hover .scribble::after{height:.9em;opacity:.22}
   .rise{opacity:0;translate:0 18px;animation:rise .9s var(--ease) forwards;animation-delay:var(--d,0s)}
@@ -424,7 +424,7 @@
   .steps li{transition:transform .3s var(--ease)}
   .steps li::before{transition:transform .3s var(--ease), background-color .3s, box-shadow .3s}
   .steps li:hover{transform:translateX(4px)}
-  .steps li:hover::before{transform:scale(1.18);background:var(--tomato);box-shadow:0 0 0 6px rgba(142,59,107,.18)}
+  .steps li:hover::before{transform:scale(1.18);background:var(--tomato);box-shadow:0 0 0 6px rgba(228,87,46,.18)}
   .job{position:relative;transition:padding-left .35s var(--ease)}
   .job::before{content:"";position:absolute;left:0;top:32px;bottom:32px;width:3px;border-radius:3px;background:var(--tomato);transform:scaleY(0);transition:transform .35s var(--ease)}
   .job:hover{padding-left:20px}
@@ -485,20 +485,17 @@
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow rise" style="--d:.05s"><span class="dot"></span>Athens, Greece</div>
-      <h1 aria-label="I trace what breaks in production. I want to build what doesn’t.">
-        <span class="w" aria-hidden="true"><span style="--i:0">I</span></span> <span class="w" aria-hidden="true"><span style="--i:1">trace</span></span> <span class="w" aria-hidden="true"><span style="--i:2">what</span></span> <span class="w" aria-hidden="true"><span style="--i:3">breaks</span></span> <span class="w" aria-hidden="true"><span style="--i:4">in</span></span> <span class="w" aria-hidden="true"><span style="--i:5">production.</span></span><br>
-        <span class="w" aria-hidden="true"><span style="--i:6">I</span></span> <span class="w" aria-hidden="true"><span style="--i:7">want</span></span> <span class="w" aria-hidden="true"><span style="--i:8">to</span></span> <span class="w" aria-hidden="true"><span style="--i:9" class="scribble">build</span></span> <span class="w" aria-hidden="true"><span style="--i:10">what</span></span> <span class="w" aria-hidden="true"><span style="--i:11">doesn’t.</span></span>
-      </h1>
-      <p class="lede rise" style="--d:1.2s">Technical Support Engineer with a <strong>Computer Science degree</strong>. I spend my days following failures through logs, sign-in flows and integrations, then handing the root cause to R&amp;D. <strong>Now I want to be the one who ships the fix.</strong></p>
-      <div class="cta rise" style="--d:1.35s">
+      <div class="eyebrow rise" style="--d:.05s"><span class="dot"></span>Athens · open to junior software engineering roles</div>
+      <h1 aria-label="I find the bugs. Next, I fix them."><span class="w" aria-hidden="true"><span style="--i:0">I</span></span> <span class="w" aria-hidden="true"><span style="--i:1">find</span></span> <span class="w" aria-hidden="true"><span style="--i:2">the</span></span> <span class="w" aria-hidden="true"><span style="--i:3">bugs.</span></span><br><span class="w" aria-hidden="true"><span style="--i:4">Next,</span></span> <span class="w" aria-hidden="true"><span style="--i:5">I</span></span> <span class="w" aria-hidden="true"><span style="--i:6" class="scribble">fix</span></span> <span class="w" aria-hidden="true"><span style="--i:7">them.</span></span></h1>
+      <p class="lede rise" style="--d:.85s">Technical Support Engineer with a <strong>Computer Science degree</strong>. Every day I trace production failures through logs, sign-in flows and integrations, then hand the root cause to R&amp;D. Most junior developers learn that part on the job. I already do it. <strong>Now I want to be the one who ships the fix.</strong></p>
+      <div class="cta rise" style="--d:1s">
         <a class="btn btn-solid" href="#projects">See my projects <span class="arr">&rarr;</span></a>
         <a class="btn btn-ghost" href="#contact">Get in touch</a>
       </div>
     </div>
 
-    <div class="console rise" style="--d:.5s" aria-label="Terminal: whoami returns technical support engineer; deploy_fix.sh returns permission denied; sudo asks for a password">
-      <div class="console-bar"><i></i><i></i><i></i><span>marina@production: ~</span></div>
+    <div class="console rise" style="--d:.5s" aria-label="Animated log query introducing Marina">
+      <div class="console-bar"><i></i><i></i><i></i><span>career.git — main</span></div>
       <pre id="term"></pre>
     </div>
   </div>
@@ -508,7 +505,7 @@
   <div class="wrap">
     <div class="stat reveal"><b><em>#</em>1</b><span>performer on my support project, by Zendesk metrics</span></div>
     <div class="stat reveal"><b>900<em>+</em></b><span>technical issues investigated on a live SaaS platform</span></div>
-    <div class="stat reveal"><b>4</b><span>languages: Amharic, English, Greek, Arabic</span></div>
+    <div class="stat reveal"><b>4</b><span>languages: English, Amharic, Arabic, Greek</span></div>
     <div class="stat reveal"><b>7</b><span>projects built: web apps, AI, systems</span></div>
   </div>
 </div>
@@ -871,10 +868,10 @@
       </div>
       <div class="edu-card reveal">
         <h3>Languages</h3>
-        <div class="lang-row"><span><b>Amharic</b> · native</span><span class="bar"><i style="width:100%"></i></span></div>
         <div class="lang-row"><span><b>English</b> · native</span><span class="bar"><i style="width:100%"></i></span></div>
-        <div class="lang-row"><span><b>Greek</b> · B2</span><span class="bar"><i style="width:72%"></i></span></div>
+        <div class="lang-row"><span><b>Amharic</b> · native</span><span class="bar"><i style="width:100%"></i></span></div>
         <div class="lang-row"><span><b>Arabic</b> · B2</span><span class="bar"><i style="width:72%"></i></span></div>
+        <div class="lang-row"><span><b>Greek</b> · A2</span><span class="bar"><i style="width:35%"></i></span></div>
       </div>
     </div>
   </div>
@@ -904,46 +901,29 @@
 <script>
 /* ---------- console typing ---------- */
 (function(){
-  const P = '<span class="pu">marina@production</span><span class="c">:~$</span> ';
-  const script = [
-    {c:'whoami'},
-    {o:'technical_support_engineer'},
-    {o:''},
-    {c:'cat experience.log'},
-    {o:'&gt; CS graduate, builds full-stack web apps'},
-    {o:'&gt; traces bugs across APIs, logs &amp; integrations'},
-    {o:'&gt; hands root causes to R&amp;D'},
-    {o:''},
-    {c:'./deploy_fix.sh'},
-    {o:'<span class="err">Permission denied.</span>'},
-    {o:''},
-    {c:'sudo ./deploy_fix.sh'},
-    {o:'[sudo] password for marina: ', last:true},
+  const lines = [
+    ['<span class="c">// how I got here</span>', 0],
+    ['git log --oneline', 1],
+    ['', 0],
+    ['<span class="k">a1f3c09</span> study computer science (BSc)', 0],
+    ['<span class="k">7be21d4</span> build web apps, an interpreter, CNNs', 0],
+    ['<span class="k">e04c9aa</span> debug production SaaS: 900+ tickets', 0],
+    ['<span class="k">c33d817</span> hand root causes to R&amp;D', 0],
+    ['<span class="r">HEAD &rarr;</span> <span class="s">ship the fix myself</span>', 0],
   ];
   const el = document.getElementById('term');
-  const caret = '<span class="caret"></span>';
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const full = () => script.map(l => l.c!==undefined ? P + l.c : '<span class="out">'+l.o+'</span>').join('\n');
-  if(reduce){ el.innerHTML = full() + caret; return; }
-  let out = '', i = 0;
-  function line(){
-    if(i >= script.length){ return; }
-    const l = script[i++];
-    if(l.c !== undefined){
-      let k = 0;
-      (function type(){
-        el.innerHTML = out + P + l.c.slice(0,k) + caret;
-        if(k < l.c.length){ k++; setTimeout(type, 55 + Math.random()*40); }
-        else { out += P + l.c + '\n'; setTimeout(line, 320); }
-      })();
-    } else {
-      out += '<span class="out">' + l.o + '</span>' + (l.last ? '' : '\n');
-      el.innerHTML = out + caret;
-      setTimeout(line, l.o ? 230 : 120);
-    }
+  if(reduce){ el.innerHTML = lines.map(l=>(l[1]?'$ ':'')+l[0]).join('\n'); return; }
+  let i = 0, out = '';
+  function next(){
+    if(i >= lines.length){ el.innerHTML = out + '<span class="caret"></span>'; return; }
+    const [html, isCmd] = lines[i];
+    out += (isCmd ? '<span class="c">$</span> ' : '') + html + '\n';
+    el.innerHTML = out + '<span class="caret"></span>';
+    i++;
+    setTimeout(next, isCmd ? 520 : (html ? 330 : 400));
   }
-  el.innerHTML = P + caret;
-  setTimeout(line, 900);
+  setTimeout(next, 500);
 })();
 
 
